@@ -13,13 +13,14 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.16.3"  # Specify Flutter version
+          flutter-version: "3.16.3"  # Explicitly set a stable version
 
       - name: Enable Windows support
         run: flutter config --enable-windows-desktop
 
       - name: Install dependencies
         run: |
+          cd app_messe_2025
           flutter pub get
 
       - name: Build Windows executable
@@ -30,7 +31,7 @@ jobs:
       - name: Debug: List Build Output
         run: |
           echo "Listing all contents of the Windows build directory:"
-          ls -R app_messe_2025/build/windows/
+          dir app_messe_2025\build\windows\ /s
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
