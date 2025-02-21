@@ -29,7 +29,7 @@ jobs:
           flutter build windows
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # Updated to v4
         with:
           name: windows-build
           path: app_messe_2025/build/windows/runner/Release/
