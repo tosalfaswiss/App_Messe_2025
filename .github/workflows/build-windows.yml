@@ -20,7 +20,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd app_messe_2025
           flutter pub get
 
       - name: Build Windows executable
