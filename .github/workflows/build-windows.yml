@@ -1,0 +1,35 @@
+name: Build Windows App
+
+on: [push, workflow_dispatch]  # Runs on push or manually
+
+jobs:
+  build:
+    runs-on: windows-latest  # Use a Windows virtual machine
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "stable"
+
+      - name: Enable Windows support
+        run: flutter config --enable-windows-desktop
+
+      - name: Install dependencies
+        run: |
+          cd app_messe_2025
+          flutter pub get
+
+      - name: Build Windows executable
+        run: |
+          cd app_messe_2025
+          flutter build windows
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows-build
+          path: app_messe_2025/build/windows/runner/Release/
