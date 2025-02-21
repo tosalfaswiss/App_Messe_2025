@@ -13,7 +13,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.16.3"  # Explicitly set a stable version
+          flutter-version: "3.16.3"  # Specify Flutter version
 
       - name: Enable Windows support
         run: flutter config --enable-windows-desktop
@@ -29,8 +29,9 @@ jobs:
           flutter build windows
 
       - name: Debug: List Build Output
+        shell: cmd
         run: |
-          echo "Listing all contents of the Windows build directory:"
+          echo Listing all contents of the Windows build directory:
           dir app_messe_2025\build\windows\ /s
 
       - name: Upload Build Artifact
