@@ -1,10 +1,10 @@
 name: Build Windows App
 
-on: [push, workflow_dispatch]  # Runs on push or manually
+on: [push, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: windows-latest  # Use a Windows virtual machine
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
@@ -13,7 +13,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.16.3"
+          flutter-version: "3.16.3"  # Specify Flutter version
 
       - name: Enable Windows support
         run: flutter config --enable-windows-desktop
@@ -28,8 +28,13 @@ jobs:
           cd app_messe_2025
           flutter build windows
 
+      - name: Debug: List Build Output
+        run: |
+          echo "Listing all contents of the Windows build directory:"
+          ls -R app_messe_2025/build/windows/
+
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4  # Updated to v4
+        uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: app_messe_2025/build/windows/runner/Release/
+          path: app_messe_2025/build/windows/x64/runner/Release/
