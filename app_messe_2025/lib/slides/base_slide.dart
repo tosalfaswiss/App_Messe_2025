@@ -5,9 +5,7 @@ import '../widgets/back_button_with_title.dart';
 import '../widgets/top_icons_button.dart';
 import '../models/filters.dart';
 import '../services/adhesive_service.dart';
-import 'category_detail_slide.dart';
 import '../widgets/middle_grid.dart';
-import '../utils/utils.dart';
 
 class BaseSlide extends StatelessWidget {
   final String title;
@@ -33,11 +31,7 @@ class BaseSlide extends StatelessWidget {
     required this.adhesiveService,
     required this.onBackPressed,
     this.gridColumns = 4,
-  })   : assert(
-          disableBackButton || onBackPressed != defaultOnBackPressed,
-          "onBackPressed must be provided if disableBackButton is false",
-        ),
-        super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +76,7 @@ class BaseSlide extends StatelessWidget {
             padding: const EdgeInsets.only(right: 0.0, top: 0.0),
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.2,
-              child: topRightButton ?? Image.asset('assets/alfa_klebstoffe.png'),
+              child: topRightButton ?? Image.asset('assets/alfa_klebstoffe.png', fit: BoxFit.contain),
             ),
           ),
         ),
@@ -90,33 +84,32 @@ class BaseSlide extends StatelessWidget {
     );
   }
 
-Widget _buildTopIconsSection(BuildContext context) {
-  return Container(
-    height: MediaQuery.of(context).size.height * 0.22,
-    decoration: BoxDecoration(
-      border: Border.all(color: customButtonBorderColor, width: 0.0),
-      borderRadius: BorderRadius.circular(MediaQuery.of(context).size.height * 0.01),
-    ),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Wrap(
-          alignment: WrapAlignment.center,
-          children: topIcons!
-              .map<Widget>((iconData) => TopIconsButton(
-                    imagePath: iconData['iconPath'] as String,
-                    iconData: iconData,
-                    filters: filters,
-                    adhesiveService: adhesiveService,
-                    previousCategorySlide: this, // ✅ Pass correct previous slide
-                  ))
-              .toList(), // ✅ Ensures correct type
-        ),
-      ],
-    ),
-  );
-}
-
+  Widget _buildTopIconsSection(BuildContext context) {
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.22,
+      decoration: BoxDecoration(
+        border: Border.all(color: customButtonBorderColor, width: 0.0),
+        borderRadius: BorderRadius.circular(MediaQuery.of(context).size.height * 0.01),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Wrap(
+            alignment: WrapAlignment.center,
+            children: topIcons!
+                .map<Widget>((iconData) => TopIconsButton(
+                      imagePath: iconData['iconPath'] as String,
+                      iconData: iconData,
+                      filters: filters,
+                      adhesiveService: adhesiveService,
+                      previousCategorySlide: this,
+                    ))
+                .toList(),
+          ),
+        ],
+      ),
+    );
+  }
 
   Widget _buildBottomSheet(BuildContext context) {
     return Container(

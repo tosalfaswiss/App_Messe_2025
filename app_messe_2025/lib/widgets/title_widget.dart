@@ -9,14 +9,13 @@ class TitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0), // Small padding
+      padding: EdgeInsets.zero,
       decoration: BoxDecoration(
-        //color: titleBackgroundColor, // Background color from constants.dart
-        borderRadius: BorderRadius.circular(customButtonBorderRadius), // Border radius
+        borderRadius: BorderRadius.circular(customButtonBorderRadius),
       ),
       child: Text(
         title,
-        style: titleTextStyle, // Use centralized text style
+        style: titleTextStyle,
         textAlign: TextAlign.center,
       ),
     );
