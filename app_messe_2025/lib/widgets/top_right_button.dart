@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../constants.dart';
 import '../models/filters.dart';
 import '../services/adhesive_service.dart';
 import '../slides/industry_slide.dart';
 
 class TopRightButton extends StatelessWidget {
-  final Filters filters;
   final AdhesiveService adhesiveService;
 
   const TopRightButton({
     Key? key,
-    required this.filters,
     required this.adhesiveService,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final filters = context.read<Filters>();
+
     return GestureDetector(
       onTap: () {
         // Reset filters and navigate back to IndustrySlide
@@ -24,7 +25,6 @@ class TopRightButton extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) => IndustrySlide(
-              filters: filters,
               adhesiveService: adhesiveService,
             ),
           ),
@@ -34,23 +34,21 @@ class TopRightButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 0.0),
-              child: Image.asset(
+          Padding(
+            padding: const EdgeInsets.only(right: 0.0),
+            child: Image.asset(
               _getIndustryIcon(filters.industry),
               height: MediaQuery.of(context).size.height * 0.15,
-              fit: BoxFit.contain,   
-            )   
-            ),     
+              fit: BoxFit.contain,
+            ),
+          ),
         ],
       ),
     );
   }
 
   String _getIndustryIcon(String? industry) {
-    /*if (industry == "Mattress") return 'assets/mattress_icon.png';
-    if (industry == "Upholstery") return 'assets/upholstery_icon.png';
-    if (industry == "Automotive") return 'assets/automotive_icon.png';*/
-    return 'assets/simalfa.png'; 
+    // Optional: Use dynamic icon loading based on filter if needed
+    return 'assets/simalfa.png';
   }
 }

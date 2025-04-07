@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/filters.dart';
 import '../services/adhesive_service.dart';
 import '../slides/base_slide.dart';
@@ -8,7 +9,6 @@ import '../constants.dart';
 import '../utils/utils.dart';
 
 class CategoryDetailSlide extends StatelessWidget {
-  final Filters filters;
   final AdhesiveService adhesiveService;
   final String title;
   final String categoryType;
@@ -17,7 +17,6 @@ class CategoryDetailSlide extends StatelessWidget {
 
   const CategoryDetailSlide({
     Key? key,
-    required this.filters,
     required this.adhesiveService,
     required this.title,
     required this.categoryType,
@@ -27,13 +26,11 @@ class CategoryDetailSlide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get the currently selected value (if any) for this category
-    final String currentSelection = getCurrentSelection(filters, categoryType);
+    final filters = context.watch<Filters>();
 
-    // Generate dynamic top icons
+    final String currentSelection = getCurrentSelection(filters, categoryType);
     final topIcons = generateTopIcons(filters);
 
-    // Build button data including a "Deselect" item
     final List<Map<String, dynamic>> itemData = [
       ...options.map((option) => {
             'label': option,
@@ -49,29 +46,22 @@ class CategoryDetailSlide extends StatelessWidget {
 
     return BaseSlide(
       title: title,
-      filters: filters,
       adhesiveService: adhesiveService,
       topRightButton: TopRightButton(
-        filters: filters,
         adhesiveService: adhesiveService,
       ),
-      topIcons: topIcons,
       customButtonData: itemData,
       onItemTap: (label) {
-        // If "Deselect" is tapped, reset category filter
         if (label == 'Deselect') {
           filters.resetFilterByCategory(categoryType);
         } else {
-          // Update the filter for this category
           filters.updateField(categoryType, label);
         }
 
-        // Navigate back to CategorySelectionSlide
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (context) => CategorySelectionSlide(
-              filters: filters,
               adhesiveService: adhesiveService,
             ),
           ),

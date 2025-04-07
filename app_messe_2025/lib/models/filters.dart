@@ -1,4 +1,6 @@
-class Filters {
+import 'package:flutter/foundation.dart';
+
+class Filters extends ChangeNotifier {
   String? industry;
   String? application;
   String? formulation;
@@ -19,15 +21,15 @@ class Filters {
   // Create a copy of the Filters instance
   Filters copy() {
     return Filters(
-      industry: this.industry,
-      application: this.application,
-      formulation: this.formulation,
-      type: this.type,
-      material: this.material,
-      results: this.results != null ? List<String>.from(this.results!) : null,
-    )..updateHistory = List<String>.from(this.updateHistory);
+      industry: industry,
+      application: application,
+      formulation: formulation,
+      type: type,
+      material: material,
+      results: results != null ? List<String>.from(results!) : null,
+    )..updateHistory = List<String>.from(updateHistory);
   }
-  
+
   // Reset all fields
   void reset() {
     industry = null;
@@ -37,6 +39,7 @@ class Filters {
     material = null;
     results = null;
     updateHistory.clear();
+    notifyListeners(); // 🔔
   }
 
   void clearField(String fieldName) {
@@ -49,8 +52,9 @@ class Filters {
     };
 
     if (fields.containsKey(fieldName)) {
-      fields[fieldName]!(); // Clear the specific field
-      updateHistory.remove(fieldName); 
+      fields[fieldName]!();
+      updateHistory.remove(fieldName);
+      notifyListeners(); // 🔔
     } else {
       print('clearField Unknown field: $fieldName');
     }
@@ -60,6 +64,7 @@ class Filters {
   void updateField(String fieldName, dynamic value) {
     fieldName = fieldName.toLowerCase();
     clearField(fieldName);
+
     switch (fieldName) {
       case 'industry':
         industry = value as String?;
@@ -80,21 +85,23 @@ class Filters {
         print('updateField Unknown field: $fieldName');
         return;
     }
-    updateHistory.remove(fieldName); 
+
+    updateHistory.remove(fieldName);
     updateHistory.add(fieldName);
+    notifyListeners(); // 🔔
   }
 
   // Reset the most recently updated field
   void resetLastUpdatedField() {
     if (updateHistory.isNotEmpty) {
-      String lastField = updateHistory.removeLast();
+      final lastField = updateHistory.removeLast();
       clearField(lastField);
+      notifyListeners(); // 🔔
     } else {
       print('No fields to reset.');
     }
   }
 
-  // Check if required fields are complete
   bool isComplete({List<String>? requiredFields}) {
     requiredFields ??= ['industry', 'application', 'type', 'material'];
     for (String field in requiredFields) {
@@ -124,7 +131,6 @@ class Filters {
     return 'Filters(industry: $industry, application: $application, formulation: $formulation, type: $type, material: $material, results: $results, updateHistory: $updateHistory)';
   }
 
-  /// Resets a filter by category type.
   void resetFilterByCategory(String categoryType) {
     final fieldMap = {
       'application': () => application = null,
@@ -134,9 +140,11 @@ class Filters {
       'type': () => type = null,
     };
 
-    if (fieldMap.containsKey(categoryType.toLowerCase())) {
-      fieldMap[categoryType.toLowerCase()]!();
-      updateHistory.remove(categoryType.toLowerCase());
+    final normalized = categoryType.toLowerCase();
+    if (fieldMap.containsKey(normalized)) {
+      fieldMap[normalized]!();
+      updateHistory.remove(normalized);
+      notifyListeners(); // 🔔
     } else {
       print("resetFilterByCategory: couldn't reset '$categoryType'");
     }
@@ -144,17 +152,14 @@ class Filters {
 
   void deselectLastFilter() {
     if (updateHistory.isNotEmpty) {
-      // Get the last updated field
-      String lastField = updateHistory.removeLast();
-
-      // Clear the corresponding field
+      final lastField = updateHistory.removeLast();
       clearField(lastField);
+      notifyListeners(); // 🔔
     } else {
       print('No filters to reset.');
     }
   }
 
-    /// Checks if any category filter is selected.
   bool isAnyCategorySelected() {
     return application != null || formulation != null || material != null;
   }

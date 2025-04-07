@@ -105,7 +105,12 @@ String getCurrentSelection(Filters filters, String categoryType) {
 void defaultOnBackPressed() {}
 
 void handleTopIconClick(
-    BuildContext context, Map<String, dynamic> iconData, Filters filters, AdhesiveService adhesiveService, Widget previousCategorySlide) {
+  BuildContext context,
+  Map<String, dynamic> iconData,
+  Filters filters,
+  AdhesiveService adhesiveService,
+  Widget previousCategorySlide,
+) {
   final filterKey = iconData['filterKey'] as String;
 
   if (filterKey == 'industry') {
@@ -114,13 +119,11 @@ void handleTopIconClick(
       context,
       MaterialPageRoute(
         builder: (context) => IndustrySlide(
-          filters: filters, // Use original filters since everything is reset
           adhesiveService: adhesiveService,
         ),
       ),
     );
   } else if (filterKey == 'type') {
-    // Reset material, application, and formulation when selecting adhesive type
     filters.resetFilterByCategory('material');
     filters.resetFilterByCategory('application');
     filters.resetFilterByCategory('formulation');
@@ -130,13 +133,11 @@ void handleTopIconClick(
       context,
       MaterialPageRoute(
         builder: (context) => AdhesiveTypeSelectionSlide(
-          filters: filters, // Use original filters since we reset categories
           adhesiveService: adhesiveService,
         ),
       ),
     );
   } else {
-    // ✅ Only copy filters for category selection cases
     final tempFilters = filters.copy();
     tempFilters.resetFilterByCategory(filterKey);
     final options = adhesiveService.getAvailableOptions(tempFilters, filterKey).toList();
@@ -145,12 +146,11 @@ void handleTopIconClick(
       context,
       MaterialPageRoute(
         builder: (context) => CategoryDetailSlide(
-          filters: filters, 
           adhesiveService: adhesiveService,
           title: "Select ${iconData['label']}",
           categoryType: filterKey,
           options: options,
-          previousCategorySlide: previousCategorySlide, // Ensure correct navigation
+          previousCategorySlide: previousCategorySlide,
         ),
       ),
     );
