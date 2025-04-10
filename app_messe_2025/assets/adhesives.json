@@ -1,11 +1,6 @@
 {
   "adhesives": [
     {
-      "name": "ALFAMELT® 4050/50",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Inline production",
@@ -15,11 +10,16 @@
         "1-side applicable",
         "1K"
       ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT",
+        "IOS-MAT-0195"
+      ],
       "formulations": [
         "APAO"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -29,29 +29,24 @@
         "Pocket springs",
         "Wadding"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT",
-        "IOS-MAT-0195"
-      ],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Boxes to 18 kg",
           "pallet to 648 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 4050/50",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 3031",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Automotive & Transport"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -59,22 +54,7 @@
         "Spray",
         "1-side applicable",
         "1K",
-        "High heat resistance",
         "On-demand 1C+"
-      ],
-      "formulations": [],
-      "types": [
-        "Water-based Adhesives"
-      ],
-      "materials": [
-        "Fabric",
-        "Foam",
-        "Leather",
-        "Natural products",
-        "Wadding"
-      ],
-      "results": [
-        "simalfa"
       ],
       "certificates": [
         "OEKO-TEX® ECO PASSPORT",
@@ -82,266 +62,102 @@
         "VDA 278",
         "GREENGUARD"
       ],
-      "meta": {
-        "packaging": [
-          "Boxes of 20 kg",
-          "containers of 500 kg",
-          "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
-        ]
-      }
-    },
-    {
-      "name": "SIMALFA® 308 FR",
+      "formulations": [
+        "High heat resistance"
+      ],
       "industries": [
+        "Mattresses Manufacturing & Foam Converting",
         "Automotive & Transport"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Free flow",
-        "Spray",
-        "1-side applicable",
-        "1K",
-        "Flame-retardant"
-      ],
-      "formulations": [],
-      "types": [
-        "Water-based Adhesives"
       ],
       "materials": [
         "Fabric",
         "Foam",
         "Leather",
         "Natural products",
-        "Wadding",
-        "Wood"
+        "Wadding"
       ],
+      "meta": {
+        "colors": [
+          "White or Red"
+        ],
+        "packaging": [
+          "Boxes of 20 kg",
+          "containers of 500 kg",
+          "IBCs of 1000 kg"
+        ]
+      },
+      "name": "SIMALFA® 3031",
       "results": [
         "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Automatic spray",
+        "Free flow",
+        "Spray",
+        "1-side applicable",
+        "1K"
       ],
       "certificates": [
         "EN 45545-2",
         "FAR 25.853",
         "GREENGUARD"
       ],
+      "formulations": [
+        "Flame-retardant"
+      ],
+      "industries": [
+        "Automotive & Transport"
+      ],
+      "materials": [
+        "Fabric",
+        "Foam",
+        "Leather",
+        "Natural products",
+        "Wadding",
+        "Wood"
+      ],
       "meta": {
+        "colors": [
+          "White or Red"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
         ]
-      }
+      },
+      "name": "SIMALFA® 308 FR",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 8010/0",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "Spray",
         "1-side applicable",
-        "1K",
-        "PSA"
-      ],
-      "formulations": [
-        "Biobased"
-      ],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
-      "materials": [
-        "Fabric",
-        "Foam",
-        "Leather",
-        "Natural products",
-        "Wadding"
-      ],
-      "results": [
-        "alfamelt"
+        "1K"
       ],
       "certificates": [
         "Bio-based ISO 16620- 2"
       ],
-      "meta": {
-        "packaging": [
-          "Boxes to 18 kg",
-          "pallet to 648 kg"
-        ],
-        "colors": [
-          "Yellowish"
-        ]
-      }
-    },
-    {
-      "name": "KulKote® 100",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture",
-        "Automotive & Transport"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Roller",
-        "Spray"
-      ],
       "formulations": [
-        "CR-free"
+        "Biobased",
+        "PSA"
       ],
-      "types": [
-        "Coatings",
-        "Chlorine-free Adhesives"
-      ],
-      "materials": [
-        "Fabric",
-        "Foam"
-      ],
-      "results": [],
-      "certificates": [
-        "GREENGUARD"
-      ],
-      "meta": {
-        "packaging": [
-          "Boxes of 20 kg",
-          "containers of 1000 kg"
-        ],
-        "colors": [
-          "Blue",
-          "White or Custom"
-        ]
-      }
-    },
-    {
-      "name": "KulKote® 100 Carbon",
       "industries": [
         "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture",
-        "Automotive & Transport"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Roller",
-        "Spray",
-        "Flame-retardant"
-      ],
-      "formulations": [
-        "CR-free"
-      ],
-      "types": [
-        "Coatings",
-        "Chlorine-free Adhesives"
-      ],
-      "materials": [
-        "Fabric",
-        "Foam"
-      ],
-      "results": [],
-      "certificates": [
-        "FAR 25.853"
-      ],
-      "meta": {
-        "packaging": [
-          "Boxes of 20 kg",
-          "containers of 1000 kg"
-        ],
-        "colors": [
-          "Carbon"
-        ]
-      }
-    },
-    {
-      "name": "KulKote® 100 Copper",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture",
-        "Automotive & Transport"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Roller",
-        "Spray"
-      ],
-      "formulations": [
-        "CR-free"
-      ],
-      "types": [
-        "Coatings",
-        "Chlorine-free Adhesives"
-      ],
-      "materials": [
-        "Fabric",
-        "Foam"
-      ],
-      "results": [],
-      "certificates": [],
-      "meta": {
-        "packaging": [
-          "Boxes of 20 kg",
-          "containers of 1000 kg"
-        ],
-        "colors": [
-          "Copper"
-        ]
-      }
-    },
-    {
-      "name": "KulKote® 100 Copper",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture",
-        "Automotive & Transport"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Roller",
-        "Spray"
-      ],
-      "formulations": [
-        "CR-free"
-      ],
-      "types": [
-        "Coatings",
-        "Chlorine-free Adhesives"
-      ],
-      "materials": [
-        "Fabric",
-        "Foam"
-      ],
-      "results": [],
-      "certificates": [],
-      "meta": {
-        "packaging": [
-          "Boxes of 20 kg",
-          "containers of 1000 kg"
-        ],
-        "colors": [
-          "Lavender"
-        ]
-      }
-    },
-    {
-      "name": "SIMALFA® 301",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Automotive & Transport"
-      ],
-      "applications": [
-        "Free flow",
-        "Spray",
-        "1K",
-        "High heat resistance"
-      ],
-      "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -350,32 +166,213 @@
         "Natural products",
         "Wadding"
       ],
+      "meta": {
+        "colors": [
+          "Yellowish"
+        ],
+        "packaging": [
+          "Boxes to 18 kg",
+          "pallet to 648 kg"
+        ]
+      },
+      "name": "ALFAMELT® 8010/0",
       "results": [
-        "simalfa"
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Automatic spray",
+        "Roller",
+        "Spray"
+      ],
+      "certificates": [
+        "GREENGUARD"
+      ],
+      "formulations": [
+        "CR-free"
+      ],
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture",
+        "Automotive & Transport"
+      ],
+      "materials": [
+        "Fabric",
+        "Foam"
+      ],
+      "meta": {
+        "colors": [
+          "Blue",
+          "White or Custom"
+        ],
+        "packaging": [
+          "Boxes of 20 kg",
+          "containers of 1000 kg"
+        ]
+      },
+      "name": "KulKote® 100",
+      "results": [],
+      "types": [
+        "Coatings",
+        "Chlorine-free Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Automatic spray",
+        "Roller",
+        "Spray"
+      ],
+      "certificates": [
+        "FAR 25.853"
+      ],
+      "formulations": [
+        "Flame-retardant",
+        "CR-free"
+      ],
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture",
+        "Automotive & Transport"
+      ],
+      "materials": [
+        "Fabric",
+        "Foam"
+      ],
+      "meta": {
+        "colors": [
+          "Carbon"
+        ],
+        "packaging": [
+          "Boxes of 20 kg",
+          "containers of 1000 kg"
+        ]
+      },
+      "name": "KulKote® 100 Carbon",
+      "results": [],
+      "types": [
+        "Coatings",
+        "Chlorine-free Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Automatic spray",
+        "Roller",
+        "Spray"
+      ],
+      "certificates": [],
+      "formulations": [
+        "CR-free"
+      ],
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture",
+        "Automotive & Transport"
+      ],
+      "materials": [
+        "Fabric",
+        "Foam"
+      ],
+      "meta": {
+        "colors": [
+          "Copper"
+        ],
+        "packaging": [
+          "Boxes of 20 kg",
+          "containers of 1000 kg"
+        ]
+      },
+      "name": "KulKote® 100 Copper",
+      "results": [],
+      "types": [
+        "Coatings",
+        "Chlorine-free Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Automatic spray",
+        "Roller",
+        "Spray"
+      ],
+      "certificates": [],
+      "formulations": [
+        "CR-free"
+      ],
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture",
+        "Automotive & Transport"
+      ],
+      "materials": [
+        "Fabric",
+        "Foam"
+      ],
+      "meta": {
+        "colors": [
+          "Lavender"
+        ],
+        "packaging": [
+          "Boxes of 20 kg",
+          "containers of 1000 kg"
+        ]
+      },
+      "name": "KulKote® 100 Lavender",
+      "results": [],
+      "types": [
+        "Coatings",
+        "Chlorine-free Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Free flow",
+        "Spray",
+        "1K"
       ],
       "certificates": [
         "OEKO-TEX® ECO PASSPORT",
         "IOS-MAT-0010",
         "VDA 278"
       ],
+      "formulations": [
+        "High heat resistance"
+      ],
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Automotive & Transport"
+      ],
+      "materials": [
+        "Fabric",
+        "Foam",
+        "Leather",
+        "Natural products",
+        "Wadding"
+      ],
       "meta": {
+        "colors": [
+          "White or Red"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
         ]
-      }
+      },
+      "name": "SIMALFA® 301",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 309",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture",
-        "Automotive & Transport"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -384,9 +381,15 @@
         "1K",
         "Heat activation"
       ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT",
+        "GREENGUARD"
+      ],
       "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture",
+        "Automotive & Transport"
       ],
       "materials": [
         "Fabric",
@@ -396,29 +399,25 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT",
-        "GREENGUARD"
-      ],
       "meta": {
+        "colors": [
+          "White or Red"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
         ]
-      }
+      },
+      "name": "SIMALFA® 309",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 365",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Inline production",
         "Roller",
@@ -428,12 +427,14 @@
         "Debonding",
         "Heat activation"
       ],
+      "certificates": [
+        "IOS-MAT-0010"
+      ],
       "formulations": [
         "CR-free"
       ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Fabric",
@@ -441,28 +442,26 @@
         "Natural products",
         "Wadding"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "IOS-MAT-0010"
-      ],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "SIMALFA® 365",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 366",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Inline production",
         "Roller",
@@ -471,12 +470,12 @@
         "1K",
         "Heat activation"
       ],
+      "certificates": [],
       "formulations": [
         "CR-free"
       ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Fabric",
@@ -484,71 +483,71 @@
         "Natural products",
         "Wadding"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "SIMALFA® 366",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 371",
-      "industries": [
-        "Automotive & Transport"
-      ],
       "applications": [
         "Free flow",
         "Spray",
         "1-side applicable",
         "1K",
-        "High heat resistance",
         "On-demand 1C+"
-      ],
-      "formulations": [
-        "CR-free"
-      ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
-      ],
-      "materials": [
-        "Fabric",
-        "Foam",
-        "Leather",
-        "Natural products",
-        "Wadding",
-        "Wood"
-      ],
-      "results": [
-        "simalfa"
       ],
       "certificates": [
         "VDA 278"
       ],
+      "formulations": [
+        "High heat resistance",
+        "CR-free"
+      ],
+      "industries": [
+        "Automotive & Transport"
+      ],
+      "materials": [
+        "Fabric",
+        "Foam",
+        "Leather",
+        "Natural products",
+        "Wadding",
+        "Wood"
+      ],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "SIMALFA® 371",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 381",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Free flow",
         "Roller",
@@ -557,13 +556,13 @@
         "1K",
         "On-demand 1C+"
       ],
+      "certificates": [],
       "formulations": [
         "Monomaterial",
         "CR-free"
       ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Fabric",
@@ -571,40 +570,40 @@
         "Natural products",
         "Wadding"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "SIMALFA® 381",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 475",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Inline production",
         "Roller",
         "Free flow",
         "1-side applicable",
-        "1K",
-        "High heat resistance"
+        "1K"
       ],
+      "certificates": [],
       "formulations": [
+        "High heat resistance",
         "CR-free"
       ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Fabric",
@@ -614,40 +613,40 @@
         "Pocket springs",
         "Wadding"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "SIMALFA® 475",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 481",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Free flow",
         "Spray",
         "1-side applicable",
         "1K",
-        "High heat resistance",
         "On-demand 1C+"
       ],
+      "certificates": [],
       "formulations": [
+        "High heat resistance",
         "CR-free"
       ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Foam",
@@ -656,27 +655,26 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White or Red"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
         ]
-      }
+      },
+      "name": "SIMALFA® 481",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 819",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -684,9 +682,13 @@
         "Spray",
         "2K"
       ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT"
+      ],
       "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -697,28 +699,25 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT"
-      ],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "SIMALFA® 819",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 825",
-      "industries": [
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -727,9 +726,12 @@
         "1-side applicable",
         "2K"
       ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT"
+      ],
       "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -741,38 +743,40 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT"
-      ],
       "meta": {
+        "colors": [
+          "White or Blue"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Blue"
         ]
-      }
+      },
+      "name": "SIMALFA® 825",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 3022",
-      "industries": [
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
         "Spray",
-        "1K",
+        "1K"
+      ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT",
+        "IOS-MAT-0010"
+      ],
+      "formulations": [
         "High heat resistance"
       ],
-      "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -782,30 +786,25 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT",
-        "IOS-MAT-0010"
-      ],
       "meta": {
+        "colors": [
+          "White or Red"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
         ]
-      }
+      },
+      "name": "SIMALFA® 3022",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 3098",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -815,9 +814,11 @@
         "1K",
         "Heat activation"
       ],
+      "certificates": [],
       "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -827,40 +828,41 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White or Red"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
         ]
-      }
+      },
+      "name": "SIMALFA® 3098",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 3217",
+      "applications": [
+        "Automatic spray",
+        "Free flow",
+        "Spray",
+        "1-side applicable",
+        "1K",
+        "Heat activation"
+      ],
+      "certificates": [],
+      "formulations": [
+        "High heat resistance"
+      ],
       "industries": [
         "Automotive & Transport",
         "Upholstery & Office Furniture"
       ],
-      "applications": [
-        "Automatic spray",
-        "Free flow",
-        "Spray",
-        "1-side applicable",
-        "1K",
-        "Heat activation",
-        "High heat resistance"
-      ],
-      "formulations": [],
-      "types": [
-        "Water-based Adhesives"
-      ],
       "materials": [
         "Fabric",
         "Foam",
@@ -870,26 +872,25 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White or Red"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
         ]
-      }
+      },
+      "name": "SIMALFA® 3217",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 3382",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -899,9 +900,13 @@
         "1K",
         "On-demand 1C+"
       ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT",
+        "IOS-MAT-0010"
+      ],
       "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Fabric",
@@ -910,44 +915,42 @@
         "Pocket springs",
         "Wadding"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT",
-        "IOS-MAT-0010"
-      ],
       "meta": {
+        "colors": [
+          "White or Red"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Red"
         ]
-      }
+      },
+      "name": "SIMALFA® 3382",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 3752",
-      "industries": [
-        "Upholstery & Office Furniture",
-        "Automotive & Transport"
-      ],
       "applications": [
         "Automatic spray",
         "Spray",
         "Free flow",
-        "2K",
-        "Flame-retardant",
-        "High heat resistance"
+        "2K"
+      ],
+      "certificates": [
+        "FAR 25.853"
       ],
       "formulations": [
+        "Flame-retardant",
+        "High heat resistance",
         "CR-free"
       ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
+      "industries": [
+        "Upholstery & Office Furniture",
+        "Automotive & Transport"
       ],
       "materials": [
         "Fabric",
@@ -958,29 +961,26 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "FAR 25.853"
-      ],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "SIMALFA® 3752",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 8185",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -988,9 +988,14 @@
         "Spray",
         "2K"
       ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT",
+        "IOS-MAT-0010"
+      ],
       "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -1001,40 +1006,38 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT",
-        "IOS-MAT-0010"
-      ],
       "meta": {
+        "colors": [
+          "White or Blue"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Blue"
         ]
-      }
+      },
+      "name": "SIMALFA® 8185",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 8267",
-      "industries": [
-        "Upholstery & Office Furniture",
-        "Automotive & Transport"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
         "Spray",
-        "2K",
+        "2K"
+      ],
+      "certificates": [],
+      "formulations": [
         "High heat resistance"
       ],
-      "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Upholstery & Office Furniture",
+        "Automotive & Transport"
       ],
       "materials": [
         "Fabric",
@@ -1045,27 +1048,25 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White or Blue"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Blue"
         ]
-      }
+      },
+      "name": "SIMALFA® 8267",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "SIMALFA® 822 OF",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -1074,9 +1075,13 @@
         "1-side applicable",
         "2K"
       ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT"
+      ],
       "formulations": [],
-      "types": [
-        "Water-based Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -1087,28 +1092,25 @@
         "Wadding",
         "Wood"
       ],
-      "results": [
-        "simalfa"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT"
-      ],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "containers of 500 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "SIMALFA® 822 OF",
+      "results": [
+        "simalfa"
+      ],
+      "types": [
+        "Water-based Adhesives"
+      ]
     },
     {
-      "name": "ALFASEAL® 3522",
-      "industries": [
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
@@ -1116,51 +1118,51 @@
         "1K",
         "Heat activation"
       ],
+      "certificates": [],
       "formulations": [
         "CR-free"
       ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
+      "industries": [
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
         "Foam",
         "Leather"
       ],
-      "results": [
-        "alfaseal"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White or Blue"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Blue"
         ]
-      }
+      },
+      "name": "ALFASEAL® 3522",
+      "results": [
+        "alfaseal"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "ALFASEAL® 5202",
-      "industries": [
-        "Automotive & Transport"
-      ],
       "applications": [
         "Automatic spray",
         "Free flow",
         "Spray",
         "1K",
-        "Heat activation",
-        "High heat resistance"
+        "Heat activation"
       ],
+      "certificates": [],
       "formulations": [
+        "High heat resistance",
         "CR-free"
       ],
-      "types": [
-        "Water-based Adhesives",
-        "Chlorine-free Adhesives"
+      "industries": [
+        "Automotive & Transport"
       ],
       "materials": [
         "Fabric",
@@ -1169,25 +1171,25 @@
         "Plastics",
         "Wood"
       ],
-      "results": [
-        "alfaseal"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White or Blue"
+        ],
         "packaging": [
           "Boxes of 20 kg",
           "IBCs of 1000 kg"
-        ],
-        "colors": [
-          "White or Blue"
         ]
-      }
+      },
+      "name": "ALFASEAL® 5202",
+      "results": [
+        "alfaseal"
+      ],
+      "types": [
+        "Water-based Adhesives",
+        "Chlorine-free Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 2850/9",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
@@ -1195,74 +1197,74 @@
         "Spray",
         "1-side applicable",
         "1K"
+      ],
+      "certificates": [
+        "OEKO-TEX® ECO PASSPORT"
       ],
       "formulations": [
         "Monomaterial",
         "100% PP"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Pocket springs"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [
-        "OEKO-TEX® ECO PASSPORT"
-      ],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Bags to 25 kg",
           "pallet to 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "ALFAMELT® 2850/9",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 1700/15",
+      "applications": [
+        "Automatic spray",
+        "Nozzle",
+        "Roller",
+        "1-side applicable",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
+        "EVA"
+      ],
       "industries": [
         "Mattresses Manufacturing & Foam Converting",
         "Industrial Adhesives"
       ],
-      "applications": [
-        "Automatic spray",
-        "Nozzle",
-        "Roller",
-        "1-side applicable",
-        "1K"
-      ],
-      "formulations": [
-        "EVA"
-      ],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
       "materials": [
         "Pocket springs"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Transparent"
+        ],
         "packaging": [
           "Bags to 25 kg",
           "pallet to 1000 kg"
-        ],
-        "colors": [
-          "Transparent"
         ]
-      }
+      },
+      "name": "ALFAMELT® 1700/15",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 22000/10",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
@@ -1270,35 +1272,35 @@
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [
         "Monomaterial",
         "100% PES"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Fabric",
         "Foam",
         "Pocket springs"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [],
         "packaging": [
           "Bags to 25 kg",
           "pallets to 500 kg or 1000 kg"
-        ],
-        "colors": []
-      }
+        ]
+      },
+      "name": "ALFAMELT® 22000/10",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 10000/10",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
@@ -1306,49 +1308,50 @@
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [
         "Monomaterial"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Fabric",
         "Pocket springs"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "white"
+        ],
         "packaging": [
           "Bags to 25 kg",
           "pallet to 500 kg or 1000 kg"
-        ],
-        "colors": [
-          "white"
         ]
-      }
+      },
+      "name": "ALFAMELT® 10000/10",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 8000/4 PUR",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
-        "High heat resistance"
+        "1K"
       ],
+      "certificates": [],
       "formulations": [
+        "High heat resistance",
         "Monomaterial",
         "PUR"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting"
       ],
       "materials": [
         "Fabric",
@@ -1358,39 +1361,40 @@
         "Pocket springs",
         "Wadding"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "In aluminum-coated bags",
           "Protected in steel drums",
           "20 kg / 200 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 8000/4 PUR",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 8700/0",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "Spray",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture"
       ],
       "materials": [
         "Fabric",
@@ -1399,203 +1403,132 @@
         "Pocket springs",
         "Wadding"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Boxes to 18 kg",
           "pallet to 648 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 8700/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 4550/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Blocks to 0.5 kg",
           "boxes to 12 kg",
           "pallet to 480 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "ALFAMELT® 4550/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 2650/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric",
         "Plastics"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Transparent"
+        ],
         "packaging": [
           "Boxes to 18 kg",
           "pallet to 648 kg"
-        ],
-        "colors": [
-          "Transparent"
         ]
-      }
+      },
+      "name": "ALFAMELT® 2650/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 350/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
-        "packaging": [
-          "Pillows",
-          "carton to 15 kg",
-          "pallet to 540 kg"
-        ],
         "colors": [
           "Transparent"
-        ]
-      }
-    },
-    {
-      "name": "ALFAMELT® 3000/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Nozzle",
-        "Roller",
-        "Spray",
-        "1-side applicable",
-        "1K",
-        "PSA"
-      ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
-      "materials": [
-        "Natural products",
-        "Plastics",
-        "Wadding"
-      ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
-      "meta": {
+        ],
         "packaging": [
           "Pillows",
           "carton to 15 kg",
           "pallet to 540 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
-    },
-    {
-      "name": "ALFAMELT® 3100/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Spray",
-        "1-side applicable",
-        "1K",
-        "PSA"
-      ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
-      "materials": [
-        "Natural products",
-        "Plastics",
-        "Wadding"
-      ],
+      },
+      "name": "ALFAMELT® 350/0",
       "results": [
         "alfamelt"
       ],
-      "certificates": [],
-      "meta": {
-        "packaging": [
-          "Boxes to 18 kg",
-          "pallet to 648 kg"
-        ],
-        "colors": [
-          "Yellowish"
-        ]
-      }
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 2000/50",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
@@ -1604,9 +1537,85 @@
         "1-side applicable",
         "1K"
       ],
-      "formulations": [],
+      "certificates": [],
+      "formulations": [
+        "PSA"
+      ],
+      "industries": [
+        "Industrial Adhesives"
+      ],
+      "materials": [
+        "Natural products",
+        "Plastics",
+        "Wadding"
+      ],
+      "meta": {
+        "colors": [
+          "Yellowish"
+        ],
+        "packaging": [
+          "Pillows",
+          "carton to 15 kg",
+          "pallet to 540 kg"
+        ]
+      },
+      "name": "ALFAMELT® 3000/0",
+      "results": [
+        "alfamelt"
+      ],
       "types": [
         "Hotmelt Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Automatic spray",
+        "Spray",
+        "1-side applicable",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
+        "PSA"
+      ],
+      "industries": [
+        "Industrial Adhesives"
+      ],
+      "materials": [
+        "Natural products",
+        "Plastics",
+        "Wadding"
+      ],
+      "meta": {
+        "colors": [
+          "Yellowish"
+        ],
+        "packaging": [
+          "Boxes to 18 kg",
+          "pallet to 648 kg"
+        ]
+      },
+      "name": "ALFAMELT® 3100/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Automatic spray",
+        "Nozzle",
+        "Roller",
+        "Spray",
+        "1-side applicable",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [],
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric",
@@ -1614,367 +1623,371 @@
         "Natural products",
         "Wadding"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Pillows",
           "boxes to 14kg",
           "Pallet to 588 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 2000/50",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 11100/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "Spray",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric",
         "Natural products"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Boxes to 18 kg",
           "pallet to 648 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 11100/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFANTRA® 980/12",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [
         "APAO"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Plastics"
       ],
-      "results": [],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Bags to 25 kg",
           "pallets to 500 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "ALFANTRA® 980/12",
+      "results": [],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
+      "applications": [
+        "Automatic spray",
+        "Nozzle",
+        "1-side applicable",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
+        "APAO"
+      ],
+      "industries": [
+        "Industrial Adhesives"
+      ],
+      "materials": [
+        "Natural products"
+      ],
+      "meta": {
+        "colors": [
+          "White"
+        ],
+        "packaging": [
+          "Bags to 25 kg",
+          "pallets to 500 kg or 1000 kg"
+        ]
+      },
       "name": "ALFANTRA® 1550/3",
-      "industries": [
-        "Industrial Adhesives"
-      ],
+      "results": [],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
+    },
+    {
       "applications": [
         "Automatic spray",
         "Nozzle",
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [
         "APAO"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
-        "Natural products"
+        "Natural products",
+        "Plastics"
       ],
-      "results": [],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Bags to 25 kg",
           "pallets to 500 kg or 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
-    },
-    {
+      },
       "name": "ALFANTRA® 960/6",
-      "industries": [
-        "Industrial Adhesives"
-      ],
+      "results": [],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
+    },
+    {
       "applications": [
         "Automatic spray",
         "Nozzle",
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [
         "APAO"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Natural products",
         "Plastics"
       ],
-      "results": [],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Bags to 25 kg",
           "pallets to 500 kg or 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
-    },
-    {
+      },
       "name": "ALFANTRA® 1520/8",
-      "industries": [
-        "Industrial Adhesives"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Nozzle",
-        "1-side applicable",
-        "1K"
-      ],
-      "formulations": [
-        "APAO"
-      ],
+      "results": [],
       "types": [
         "Hotmelt Adhesives"
-      ],
-      "materials": [
-        "Natural products",
-        "Plastics"
-      ],
-      "results": [],
-      "certificates": [],
-      "meta": {
-        "packaging": [
-          "Bags to 25 kg",
-          "pallets to 500 kg or 1000 kg"
-        ],
-        "colors": [
-          "White"
-        ]
-      }
+      ]
     },
     {
-      "name": "ALFANTRA® 400/5",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [
         "APAO"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Natural products"
       ],
-      "results": [],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Bags to 25 kg",
           "pallets to 500 kg or 1000 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "ALFANTRA® 400/5",
+      "results": [],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 420/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Natural products",
         "Plastics"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Transparent"
+        ],
         "packaging": [
           "Pillows",
           "Carton to 15 kg",
           "Pallet to 600 kg"
-        ],
-        "colors": [
-          "Transparent"
         ]
-      }
+      },
+      "name": "ALFAMELT® 420/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 5000/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Spray",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Natural products"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Pillows",
           "Carton to 15 kg",
           "Pallet to 540kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 5000/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 1700/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
         "1K",
-        "Debonding",
+        "Debonding"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Natural products"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
-        "packaging": [
-          "Pillows",
-          "Carton to 15 kg",
-          "Pallet to 540kg"
-        ],
         "colors": [
           "Transparent"
+        ],
+        "packaging": [
+          "Pillows",
+          "Carton to 15 kg",
+          "Pallet to 540kg"
         ]
-      }
+      },
+      "name": "ALFAMELT® 1700/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 1300/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
         "1K",
-        "Debonding",
+        "Debonding"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Natural products"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Pillows",
           "Carton to 15 kg",
           "Pallet to 540kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 1300/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 5700/10",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
@@ -1982,138 +1995,142 @@
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [
         "EVA"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Natural products"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [],
         "packaging": [
           "Bags to 25 kg",
           "pallets to 500 kg or 1000 kg"
-        ],
-        "colors": []
-      }
+        ]
+      },
+      "name": "ALFAMELT® 5700/10",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 6700/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
-        "PSA"
-      ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
-      "materials": [],
-      "results": [
-        "alfamelt"
+        "1K"
       ],
       "certificates": [],
+      "formulations": [
+        "PSA"
+      ],
+      "industries": [
+        "Industrial Adhesives"
+      ],
+      "materials": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Boxes to 18 kg",
           "pallet to 648 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "ALFAMELT® 6700/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 6710/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
-        "PSA"
-      ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
-      "materials": [],
-      "results": [
-        "alfamelt"
+        "1K"
       ],
       "certificates": [],
+      "formulations": [
+        "PSA"
+      ],
+      "industries": [
+        "Industrial Adhesives"
+      ],
+      "materials": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Boxes to 18 kg",
           "pallet to 648 kg",
           "blocks to 0.5 kg in boxes to 12 kg",
           "pallet to 480 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 6710/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 4710/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
-        "PSA"
-      ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
-      "materials": [],
-      "results": [
-        "alfamelt"
+        "1K"
       ],
       "certificates": [],
-      "meta": {
-        "packaging": [
-          "Blocks to 0.5 kg in boxes to 12 kg",
-          "pallet to 480 kg"
-        ],
-        "colors": [
-          "Yellowish"
-        ]
-      }
-    },
-    {
-      "name": "ALFAMELT® Sticks 370/30",
+      "formulations": [
+        "PSA"
+      ],
       "industries": [
         "Industrial Adhesives"
       ],
+      "materials": [],
+      "meta": {
+        "colors": [
+          "Yellowish"
+        ],
+        "packaging": [
+          "Blocks to 0.5 kg in boxes to 12 kg",
+          "pallet to 480 kg"
+        ]
+      },
+      "name": "ALFAMELT® 4710/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
+    },
+    {
       "applications": [
         "Automatic spray",
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric",
@@ -2123,99 +2140,100 @@
         "Wadding",
         "Wood"
       ],
+      "meta": {
+        "colors": [
+          "White"
+        ],
+        "packaging": [
+          "Boxes to 10 kg"
+        ]
+      },
+      "name": "ALFAMELT® Sticks 370/30",
       "results": [
         "alfamelt"
       ],
-      "certificates": [],
-      "meta": {
-        "packaging": [
-          "Boxes to 10 kg"
-        ],
-        "colors": [
-          "White"
-        ]
-      }
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® Sticks 113/11",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric"
       ],
+      "meta": {
+        "colors": [
+          "Yellowish"
+        ],
+        "packaging": [
+          "Boxes to 10 kg"
+        ]
+      },
+      "name": "ALFAMELT® Sticks 113/11",
       "results": [
         "alfamelt"
       ],
-      "certificates": [],
-      "meta": {
-        "packaging": [
-          "Boxes to 10 kg"
-        ],
-        "colors": [
-          "Yellowish"
-        ]
-      }
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 1120/12",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
         "PSA"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Natural products",
         "Wood"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Boxes to 15 kg",
           "pallet to 540 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 1120/12",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFANTRA® 3200/30",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [
         "APAO"
       ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric",
@@ -2227,36 +2245,36 @@
         "Wadding",
         "Wood"
       ],
-      "results": [],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "White"
+        ],
         "packaging": [
           "Pillows boxes to 14 kg",
           "pallet to 588 kg"
-        ],
-        "colors": [
-          "White"
         ]
-      }
+      },
+      "name": "ALFANTRA® 3200/30",
+      "results": [],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 8010/0",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Nozzle",
         "Roller",
         "1-side applicable",
-        "1K",
+        "1K"
+      ],
+      "certificates": [],
+      "formulations": [
+        "Biobased",
         "PSA"
       ],
-      "formulations": [
-        "Biobased"
-      ],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric",
@@ -2265,55 +2283,54 @@
         "Pocket springs",
         "Wadding"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Boxes to 18 kg",
           "pallet to 648 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 8010/0",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 1000/3 NF",
-      "industries": [
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Spray",
         "1-side applicable",
         "1K"
       ],
-      "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
-      "materials": [],
-      "results": [
-        "alfamelt"
-      ],
       "certificates": [],
-      "meta": {
-        "packaging": [
-          "Blocks to 0.5 kg in boxes to 10 kg",
-          "pallet to 480 kg"
-        ],
-        "colors": [
-          "White"
-        ]
-      }
-    },
-    {
-      "name": "ALFAMELT® 14000/5",
+      "formulations": [],
       "industries": [
         "Industrial Adhesives"
       ],
+      "materials": [],
+      "meta": {
+        "colors": [
+          "White"
+        ],
+        "packaging": [
+          "Blocks to 0.5 kg in boxes to 10 kg",
+          "pallet to 480 kg"
+        ]
+      },
+      "name": "ALFAMELT® 1000/3 NF",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
+    },
+    {
       "applications": [
         "Automatic spray",
         "Nozzle",
@@ -2321,33 +2338,32 @@
         "1-side applicable",
         "1K"
       ],
+      "certificates": [],
       "formulations": [],
-      "types": [
-        "Hotmelt Adhesives"
+      "industries": [
+        "Industrial Adhesives"
       ],
       "materials": [
         "Plastics"
       ],
-      "results": [
-        "alfamelt"
-      ],
-      "certificates": [],
       "meta": {
+        "colors": [
+          "Ivory"
+        ],
         "packaging": [
           "Blocks to 0.5 kg in boxes to 11 kg",
           "pallet to 440 kg"
-        ],
-        "colors": [
-          "Ivory"
         ]
-      }
+      },
+      "name": "ALFAMELT® 14000/5",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     },
     {
-      "name": "ALFAMELT® 5510/80",
-      "industries": [
-        "Mattresses Manufacturing & Foam Converting",
-        "Industrial Adhesives"
-      ],
       "applications": [
         "Automatic spray",
         "Inline production",
@@ -2356,57 +2372,16 @@
         "Spray",
         "1-side applicable",
         "1K"
-      ],
-      "formulations": [
-        "Biobased"
-      ],
-      "types": [
-        "Hotmelt Adhesives"
-      ],
-      "materials": [
-        "Fabric",
-        "Foam",
-        "Leather",
-        "Natural products",
-        "Pocket springs",
-        "Wadding"
-      ],
-      "results": [
-        "alfamelt"
       ],
       "certificates": [
         "Bio-based ISO 16620- 2"
       ],
-      "meta": {
-        "packaging": [
-          "Pallet to 540 kg",
-          "Pillows in carton to 15 kg"
-        ],
-        "colors": [
-          "Yellowish"
-        ]
-      }
-    },
-    {
-      "name": "ALFAMELT® 3750/90",
+      "formulations": [
+        "Biobased"
+      ],
       "industries": [
         "Mattresses Manufacturing & Foam Converting",
-        "Upholstery & Office Furniture"
-      ],
-      "applications": [
-        "Automatic spray",
-        "Inline production",
-        "Nozzle",
-        "Roller",
-        "Spray",
-        "1-side applicable",
-        "1K"
-      ],
-      "formulations": [
-        "APAO"
-      ],
-      "types": [
-        "Hotmelt Adhesives"
+        "Industrial Adhesives"
       ],
       "materials": [
         "Fabric",
@@ -2416,19 +2391,65 @@
         "Pocket springs",
         "Wadding"
       ],
+      "meta": {
+        "colors": [
+          "Yellowish"
+        ],
+        "packaging": [
+          "Pallet to 540 kg",
+          "Pillows in carton to 15 kg"
+        ]
+      },
+      "name": "ALFAMELT® 5510/80",
       "results": [
         "alfamelt"
       ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
+    },
+    {
+      "applications": [
+        "Automatic spray",
+        "Inline production",
+        "Nozzle",
+        "Roller",
+        "Spray",
+        "1-side applicable",
+        "1K"
+      ],
       "certificates": [],
+      "formulations": [
+        "APAO"
+      ],
+      "industries": [
+        "Mattresses Manufacturing & Foam Converting",
+        "Upholstery & Office Furniture"
+      ],
+      "materials": [
+        "Fabric",
+        "Foam",
+        "Leather",
+        "Natural products",
+        "Pocket springs",
+        "Wadding"
+      ],
       "meta": {
+        "colors": [
+          "Yellowish"
+        ],
         "packaging": [
           "Boxes to 18 kg",
           "pallet to 648 kg"
-        ],
-        "colors": [
-          "Yellowish"
         ]
-      }
+      },
+      "name": "ALFAMELT® 3750/90",
+      "results": [
+        "alfamelt"
+      ],
+      "types": [
+        "Hotmelt Adhesives"
+      ]
     }
   ],
   "applications": [
@@ -2437,15 +2458,12 @@
     "2K",
     "Automatic spray",
     "Debonding",
-    "Flame-retardant",
     "Free flow",
     "Heat activation",
-    "High heat resistance",
     "Inline production",
     "Nozzle",
     "On-demand 1C+",
     "Overspray-free",
-    "PSA",
     "Roller",
     "Spray"
   ],
@@ -2456,14 +2474,11 @@
     "Biobased",
     "CR-free",
     "EVA",
+    "Flame-retardant",
+    "High heat resistance",
     "Monomaterial",
+    "PSA",
     "PUR"
-  ],
-  "types": [
-    "Chlorine-free Adhesives",
-    "Coatings",
-    "Hotmelt Adhesives",
-    "Water-based Adhesives"
   ],
   "materials": [
     "Fabric",
@@ -2479,5 +2494,11 @@
     "alfamelt",
     "alfaseal",
     "simalfa"
+  ],
+  "types": [
+    "Chlorine-free Adhesives",
+    "Coatings",
+    "Hotmelt Adhesives",
+    "Water-based Adhesives"
   ]
 }

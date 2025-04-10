@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import '../utils/utils.dart';
 import '../models/filters.dart';
 import '../services/adhesive_service.dart';
@@ -87,12 +88,14 @@ class _TopIconsButtonState extends State<TopIconsButton> {
                     const SizedBox(height: 6),
                     Expanded(
                       flex: 3,
-                      child: FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: Text(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                        child: AutoSizeText(
                           widget.iconData['label'],
                           textAlign: TextAlign.center,
                           maxLines: 2,
+                          minFontSize: 10,
+                          stepGranularity: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontWeight: FontWeight.w500,
