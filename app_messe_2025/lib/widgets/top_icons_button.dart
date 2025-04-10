@@ -51,7 +51,7 @@ class _TopIconsButtonState extends State<TopIconsButton> {
                 widget.previousCategorySlide,
               ),
               child: Container(
-                padding: const EdgeInsetsDirectional.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                   color: _isHovered ? Colors.grey.shade100 : Colors.white,
                   border: Border.all(
@@ -69,8 +69,18 @@ class _TopIconsButtonState extends State<TopIconsButton> {
                         child: Image.asset(
                           widget.imagePath,
                           fit: BoxFit.contain,
-                          errorBuilder: (context, error, stackTrace) =>
-                              const Icon(Icons.broken_image, size: 24),
+                          errorBuilder: (context, error, stackTrace) {
+                            return Center(
+                              child: Text(
+                                widget.imagePath,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ),

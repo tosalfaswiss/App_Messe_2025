@@ -23,21 +23,21 @@ class ResultsSlide extends StatelessWidget {
     // 1) Filter adhesives based on current filters
     final List<Adhesive> results = adhesiveService.filterAdhesives(filters);
 
-    // 2) Generate top icons dynamically
-    final topIcons = generateTopIcons(filters);
-
-    // 3) Convert adhesives into data maps for MiddleGrid
+    // 2) Convert adhesives into data maps for MiddleGrid
     final buttonData = results.map((adhesive) {
+      final resultName = adhesive.results.isNotEmpty
+          ? adhesive.results.first.toLowerCase().replaceAll(' ', '_')
+          : 'default';
       return {
         'label': adhesive.name,
-        'iconPath': 'assets/${adhesive.results.first.toLowerCase().replaceAll(' ', '_')}_result.png',
+        'iconPath': 'assets/${resultName}_result.png',
         'isDisabled': false,
       };
     }).toList();
 
-    // 4) Build BaseSlide
+    // 3) Build slide (even if empty, fallback to empty list)
     return BaseSlide(
-      title: "Results",
+      title: resultsSlideTitle,
       topRightButton: TopRightButton(
         adhesiveService: adhesiveService,
       ),
@@ -50,12 +50,49 @@ class ResultsSlide extends StatelessWidget {
         }
       },
       onItemTap: (label) {
-        final selectedAdhesive = results.firstWhere((a) => a.name == label);
+        final selectedAdhesive = results.firstWhere(
+          (a) => a.name == label,
+          orElse: () => Adhesive(
+            name: "Unknown",
+            industries: [],
+            applications: [],
+            formulations: [],
+            types: [],
+            materials: [],
+            results: [],
+            meta: Meta(packaging: [], colors: []),
+          ),
+        );
+
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: const Text("Adhesive Selected"),
-            content: Text("You selected: ${selectedAdhesive.name}"),
+            title: Text(selectedAdhesive.name),
+            content: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (selectedAdhesive.meta.packaging.isNotEmpty) ...[
+                    const Text('Packaging:', style: TextStyle(fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 4),
+                    ...selectedAdhesive.meta.packaging.map((p) => Text('- $p')).toList(),
+                    const SizedBox(height: 12),
+                  ],
+                  if (selectedAdhesive.meta.colors.isNotEmpty) ...[
+                    const Text('Colors:', style: TextStyle(fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 4),
+                    Wrap(
+                      spacing: 6,
+                      runSpacing: 4,
+                      children: selectedAdhesive.meta.colors
+                          .map((color) => Chip(label: Text(color)))
+                          .toList(),
+                    ),
+                  ],
+                ],
+              ),
+            ),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),

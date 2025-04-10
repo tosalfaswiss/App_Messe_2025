@@ -58,7 +58,7 @@ class _CategorySelectionSlideState extends State<CategorySelectionSlide> {
     }).toList();
 
     return BaseSlide(
-      title: "Select Category",
+      title: categorySelectionSlideTitle,
       adhesiveService: widget.adhesiveService,
       topRightButton: TopRightButton(
         adhesiveService: widget.adhesiveService,
@@ -93,7 +93,7 @@ class _CategorySelectionSlideState extends State<CategorySelectionSlide> {
             MaterialPageRoute(
               builder: (context) => CategoryDetailSlide(
                 adhesiveService: widget.adhesiveService,
-                title: "Select $label",
+                title: "$selectCategoryTitlePrefix$label?",
                 categoryType: label,
                 options: options,
                 previousCategorySlide: widget,
@@ -102,7 +102,7 @@ class _CategorySelectionSlideState extends State<CategorySelectionSlide> {
           );
         }
       },
-      gridColumns: 3,
+      gridColumns: 4,
     );
   }
 

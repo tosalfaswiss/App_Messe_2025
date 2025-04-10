@@ -79,7 +79,26 @@ const Color selectedButtonBorderColor = Colors.redAccent;
 const String mattressIconPath = 'assets/mattress.png';
 const String upholsteryIconPath = 'assets/upholstery.png';
 const String automotiveIconPath = 'assets/automotive.png';
+const String industrialIconPath = 'assets/industrial.png';
 
 const String applicationIconPath = 'assets/application_icon.png';
 const String formulationIconPath = 'assets/formulation_icon.png';
 const String materialsIconPath = 'assets/materials_icon.png';
+
+const String alfaLogoAsset = 'assets/alfa_klebstoffe.png';
+
+// Slide Titles
+const industrySlideTitle = "Which industry are you working in?";
+const adhesiveTypeSlideTitle = "What type of adhesive are you looking for?";
+const categorySelectionSlideTitle = "What product category best fits your needs?";
+const resultsSlideTitle = "These products match your selection";
+const selectCategoryTitlePrefix = "What is your desired ";
+
+const List<String> adhesiveTypeOrder = [
+  'Water-based Adhesives',
+  'Hotmelt Adhesives',
+  'Coatings',
+];
+
+const String topRightButtonIconPath = 'assets/simalfa.png';
+const String deselectIconPath = 'assets/deselect_icon.png';

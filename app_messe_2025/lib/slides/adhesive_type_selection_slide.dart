@@ -21,16 +21,13 @@ class AdhesiveTypeSelectionSlide extends StatelessWidget {
   Widget build(BuildContext context) {
     final filters = context.watch<Filters>();
 
-    // 1) Define adhesive types
-    final types = [
-      {'label': 'Water-based', 'iconPath': 'assets/water_based_icon.png'},
-      {'label': 'Hotmelt',     'iconPath': 'assets/hotmelt_icon.png'},
-    ];
+    // 1) Dynamically get all available types from service
+    final types = adhesiveService.getAvailableTypes(filters);
 
     // 2) Evaluate availability per type
     final availableTypes = types.map((type) {
       final tempFilters = filters.copy();
-      tempFilters.type = type['label'];
+      tempFilters.type = type['filterValue']; // Use correct filter value
       final isAvailable = adhesiveService.filterAdhesives(tempFilters).isNotEmpty;
       return {
         ...type,
@@ -54,7 +51,7 @@ class AdhesiveTypeSelectionSlide extends StatelessWidget {
       return const SizedBox(); // Temporary render while navigating
     }
 
-    // 4) Prepare button data
+    // 4) Prepare button data for the UI
     final typeItems = availableTypes.map((type) {
       return {
         'label': type['label'] as String,
@@ -65,7 +62,7 @@ class AdhesiveTypeSelectionSlide extends StatelessWidget {
 
     // 5) Build UI
     return BaseSlide(
-      title: "Select Adhesive Type",
+      title: adhesiveTypeSlideTitle,
       adhesiveService: adhesiveService,
       topRightButton: TopRightButton(
         adhesiveService: adhesiveService,
@@ -79,7 +76,10 @@ class AdhesiveTypeSelectionSlide extends StatelessWidget {
       },
       customButtonData: typeItems,
       onItemTap: (label) {
-        filters.updateField("type", label);
+        // Find the real filter value based on label
+        final selectedType = types.firstWhere((type) => type['label'] == label);
+        filters.updateField("type", selectedType['filterValue']);
+
         final remainingValid = adhesiveService.filterAdhesives(filters);
 
         if (remainingValid.isEmpty || remainingValid.length == 1) {

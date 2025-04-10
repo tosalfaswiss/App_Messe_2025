@@ -22,35 +22,28 @@ Map<String, String> filterToIconMap(Filters filters) {
 }
 
 List<Map<String, dynamic>> generateTopIcons(Filters filters) {
-
-  // Collect current filter values
   final currentValues = {
-    'industry':    filters.industry,
+    'industry': filters.industry,
     'application': filters.application,
     'formulation': filters.formulation,
-    'type':        filters.type,
-    'material':    filters.material,
+    'type': filters.type,
+    'material': filters.material,
   };
 
-  // Build a list of top icons for each filter that has a set value
   List<Map<String, dynamic>> topIcons = currentValues.entries
-      .where((entry) => entry.value != null) // Only filters that have a non-null value
+      .where((entry) => entry.value != null)
       .map((entry) {
-        final filterKey   = entry.key;        // e.g. "industry", "formulation"
-        final optionValue = entry.value as String; // e.g. "biobased", "Upholstery"
+    final filterKey = entry.key;
+    final optionValue = entry.value as String;
+    final iconFileName = optionValue.toLowerCase().replaceAll(' ', '_');
 
-        // Convert "Biobased" -> "biobased", "Hot Melt" -> "hot_melt", etc.
-        final iconFileName = optionValue.toLowerCase().replaceAll(' ', '_');
+    return {
+      'filterKey': filterKey,
+      'label': optionValue,
+      'iconPath': 'assets/$iconFileName.png',
+    };
+  }).toList();
 
-        return {
-          'filterKey': filterKey,  // The filter type (e.g. "industry")
-          'label': optionValue,    // The selected option name
-          'iconPath': 'assets/$iconFileName.png', // Dynamic icon path
-        };
-      })
-      .toList();
-
-  // Sort `topIcons` based on `filters.updateHistory`
   topIcons.sort((a, b) {
     int indexA = filters.updateHistory.indexOf(a['filterKey']);
     int indexB = filters.updateHistory.indexOf(b['filterKey']);
@@ -60,34 +53,65 @@ List<Map<String, dynamic>> generateTopIcons(Filters filters) {
   return topIcons;
 }
 
-/// Maps selected filters to a list of icons.
 List<Map<String, dynamic>> mapSelectedIcons(Filters filters) {
   final filterIcons = filterToIconMap(filters);
   return filterIcons.values.map((iconPath) => {'iconPath': iconPath}).toList();
 }
 
-
-/// Builds a list of industries for IndustrySlide.
 List<Map<String, dynamic>> buildIndustries() {
   return [
-    {'label': 'Mattress', 'iconPath': mattressIconPath, 'options': []},
-    {'label': 'Upholstery', 'iconPath': upholsteryIconPath, 'options': []},
-    {'label': 'Automotive', 'iconPath': automotiveIconPath, 'options': []},
+    {
+      'label': 'Mattresses Manufacturing & Foam Converting',
+      'iconPath': mattressIconPath,
+      'options': [],
+    },
+    {
+      'label': 'Upholstery & Office Furniture',
+      'iconPath': upholsteryIconPath,
+      'options': [],
+    },
+    {
+      'label': 'Automotive & Transport',
+      'iconPath': automotiveIconPath,
+      'options': [],
+    },
+    {
+      'label': 'Industrial Adhesives',
+      'iconPath': industrialIconPath,
+      'options': [],
+    },
   ];
 }
 
-/// Determines if only the "Show Selection" option is available.
 bool onlyShowSelectionAvailable(Filters filters, AdhesiveService adhesiveService) {
-  return (filters.application != null &&
+  final applications = adhesiveService.getApplications(filters);
+  final formulations = adhesiveService.getFormulations(filters);
+  final materials = adhesiveService.getMaterials(filters);
+
+  final hasApplications = applications.isNotEmpty;
+  final hasFormulations = formulations.isNotEmpty;
+  final hasMaterials = materials.isNotEmpty;
+
+  final hasOptionsLeft = hasApplications || hasFormulations || hasMaterials;
+
+  print('onlyShowSelectionAvailable Debug:');
+  print('Selected filters: $filters');
+  print('Available Applications: ${applications.length} → $applications');
+  print('Available Formulations: ${formulations.length} → $formulations');
+  print('Available Materials: ${materials.length} → $materials');
+  print('Has Options Left: $hasOptionsLeft');
+
+  final shouldSkipToResults = !hasOptionsLeft ||
+      (filters.application != null &&
           filters.formulation != null &&
-          filters.material != null) ||
-      (adhesiveService.applications.isEmpty &&
-          adhesiveService.formulations.isEmpty &&
-          adhesiveService.materials.isEmpty &&
-          filters.isAnyCategorySelected());
+          filters.material != null);
+
+  print('Should Skip to Results: $shouldSkipToResults');
+
+  return shouldSkipToResults;
 }
 
-/// Gets the current selection for a specific category type.
+
 String getCurrentSelection(Filters filters, String categoryType) {
   switch (categoryType.toLowerCase()) {
     case 'application':
@@ -114,7 +138,7 @@ void handleTopIconClick(
   final filterKey = iconData['filterKey'] as String;
 
   if (filterKey == 'industry') {
-    filters.reset(); // Reset all filters
+    filters.reset();
     Navigator.push(
       context,
       MaterialPageRoute(

@@ -39,7 +39,7 @@ class CategoryDetailSlide extends StatelessWidget {
           }),
       {
         'label': 'Deselect',
-        'iconPath': 'assets/deselect_icon.png',
+        'iconPath': deselectIconPath,
         'isDisabled': currentSelection.isEmpty,
       },
     ];

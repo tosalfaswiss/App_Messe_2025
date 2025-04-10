@@ -4,12 +4,22 @@ import '../models/adhesive.dart';
 import '../models/filters.dart';
 import '../constants.dart';
 
+const Map<String, String> typeLabelMapping = {
+  'Water-based Adhesives': 'Water-based',
+  'Hotmelt Adhesives': 'Hotmelt',
+  'Coatings': 'Coatings',
+};
+
 class AdhesiveService {
   List<Adhesive> adhesives = [];
   List<String> applications = [];
   List<String> formulations = [];
   List<String> types = [];
   List<String> materials = [];
+  final List<String> excludedTypes = [
+  'Chlorine-free Adhesives',
+];
+
 
   AdhesiveService();
 
@@ -32,18 +42,20 @@ class AdhesiveService {
   }
 
   List<Adhesive> filterAdhesives(Filters filters) {
-    print("filters");
+    print("Filters applied:");
     print(filters);
 
     List<Adhesive> filteredAdhesives = adhesives.where((adhesive) {
-      return (filters.industry == null || adhesive.industries.contains(filters.industry)) &&
-            (filters.application == null || adhesive.applications.contains(filters.application)) &&
-            (filters.formulation == null || adhesive.formulations.contains(filters.formulation)) &&
-            (filters.type == null || adhesive.types.contains(filters.type)) &&
-            (filters.material == null || adhesive.materials.contains(filters.material));
+      final matchesIndustry = filters.industry == null || adhesive.industries.contains(filters.industry);
+      final matchesApplication = filters.application == null || adhesive.applications.contains(filters.application);
+      final matchesFormulation = filters.formulation == null || adhesive.formulations.contains(filters.formulation);
+      final matchesType = filters.type == null || adhesive.types.contains(filters.type);
+      final matchesMaterial = filters.material == null || adhesive.materials.contains(filters.material);
+
+      return matchesIndustry && matchesApplication && matchesFormulation && matchesType && matchesMaterial;
     }).toList();
 
-    print("\nFiltered Adhesives:");
+    print("\nFiltered Adhesives Found: ${filteredAdhesives.length}");
     for (var adhesive in filteredAdhesives) {
       print(adhesive);
     }
@@ -51,39 +63,32 @@ class AdhesiveService {
     return filteredAdhesives;
   }
 
-
   List<String> getResultsForSlide(Filters filters) {
-    // Get filtered adhesives
     final filteredAdhesives = filterAdhesives(filters);
-
-    // Extract and return the `results` field from each adhesive for the slide
     return filteredAdhesives
         .expand((adhesive) => adhesive.results)
-        .toSet() // Remove duplicates
+        .toSet()
         .toList();
   }
 
-bool isOptionAvailable(String filterType) {
-  filterType = filterType.toLowerCase();
-   
-  switch (filterType) {
-    case 'types':
-      int count = adhesives.fold(0, (sum, adhesive) => sum + adhesive.types.length);
-      return count > 0;
-    case 'formulations':
-      int count = adhesives.fold(0, (sum, adhesive) => sum + adhesive.formulations.length);
-      return count > 0;
-    case 'materials':
-      int count = adhesives.fold(0, (sum, adhesive) => sum + adhesive.materials.length);
-      return count > 0;
-    case 'applications':
-      int count = adhesives.fold(0, (sum, adhesive) => sum + adhesive.applications.length);
-      return count > 0;
-    default:
-      return false; // Return false for unsupported categories
+  bool isOptionAvailable(String filterType) {
+    filterType = filterType.toLowerCase();
+
+    switch (filterType) {
+      case 'types':
+        return adhesives.any((adhesive) => adhesive.types.isNotEmpty);
+      case 'formulations':
+        return adhesives.any((adhesive) => adhesive.formulations.isNotEmpty);
+      case 'materials':
+        return adhesives.any((adhesive) => adhesive.materials.isNotEmpty);
+      case 'applications':
+        return adhesives.any((adhesive) => adhesive.applications.isNotEmpty);
+      default:
+        return false;
+    }
   }
-}
-List<String> getMaterials(Filters filters) {
+
+  List<String> getMaterials(Filters filters) {
     return _getAvailableOptions(filters, 'materials');
   }
 
@@ -103,14 +108,10 @@ List<String> getMaterials(Filters filters) {
     return _getAvailableOptions(filters, categoryType);
   }
 
-  /// Generic method to get available options for a specific category
   List<String> _getAvailableOptions(Filters filters, String category) {
     final filteredAdhesives = filterAdhesives(filters);
-    
-    // Normalize the category input (lowercase and singular handling)
     final normalizedCategory = category.toLowerCase().replaceAll(RegExp(r's$'), '');
 
-    // Use a Set to avoid duplicates
     final options = <String>{};
     for (var adhesive in filteredAdhesives) {
       switch (normalizedCategory) {
@@ -128,36 +129,58 @@ List<String> getMaterials(Filters filters) {
           break;
       }
     }
-    print("give me the filteradhesives $options.toList()");
+    print("Available options for '$category': ${options.toList()}");
     return options.toList();
   }
 
-  List<Map<String, dynamic>> buildCategories(Filters filters) {
+  List<Map<String, String>> getAvailableTypes(Filters filters) {
+    final filteredAdhesives = filterAdhesives(filters);
 
-    // Dynamically build the categories list using `isOptionAvailable`
+    final uniqueTypes = <String>{};
+    for (final adhesive in filteredAdhesives) {
+      uniqueTypes.addAll(adhesive.types);
+    }
+
+    final typesList = uniqueTypes
+        .where((filterValue) => !excludedTypes.contains(filterValue))
+        .toList();
+
+    // Sort them according to adhesiveTypeOrder
+    typesList.sort((a, b) {
+      return adhesiveTypeOrder.indexOf(a).compareTo(adhesiveTypeOrder.indexOf(b));
+    });
+
+    return typesList.map((filterValue) {
+      final label = typeLabelMapping[filterValue] ?? filterValue;
+
+      return {
+        'label': label,
+        'filterValue': filterValue,
+        'iconPath': 'assets/${label.toLowerCase().replaceAll(' ', '_')}_icon.png',
+      };
+    }).toList();
+  }
+
+  List<Map<String, dynamic>> buildCategories(Filters filters) {
     return [
-      if (filters.application == null &&
-          isOptionAvailable('Applications'))
+      if (filters.application == null && isOptionAvailable('Applications'))
         {
           'label': 'Application',
           'iconPath': applicationIconPath,
           'options': getApplications(filters),
         },
-      if (filters.formulation == null &&
-          isOptionAvailable('Formulations'))
+      if (filters.formulation == null && isOptionAvailable('Formulations'))
         {
           'label': 'Formulation',
           'iconPath': formulationIconPath,
           'options': getFormulations(filters),
         },
-      if (filters.material == null &&
-          isOptionAvailable('Materials'))
+      if (filters.material == null && isOptionAvailable('Materials'))
         {
           'label': 'Material',
           'iconPath': materialsIconPath,
-          'options': getMaterials(filters), 
+          'options': getMaterials(filters),
         },
-      // Add "Show Selection" button if any category is selected
       if (filters.isAnyCategorySelected())
         {
           'label': showSelectionButtonText,

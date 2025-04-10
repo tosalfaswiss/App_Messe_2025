@@ -48,7 +48,7 @@ class _IndustrySlideState extends State<IndustrySlide> {
     }).toList();
 
     return BaseSlide(
-      title: "Which industry are you working in?",
+      title: industrySlideTitle,
       disableBackButton: true,
       onBackPressed: defaultOnBackPressed,
       adhesiveService: widget.adhesiveService,
@@ -67,7 +67,7 @@ class _IndustrySlideState extends State<IndustrySlide> {
           ),
         );
       },
-      gridColumns: 3,
+      gridColumns: 4,
     );
   }
 }
