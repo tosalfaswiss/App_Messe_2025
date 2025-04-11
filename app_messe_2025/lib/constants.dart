@@ -61,6 +61,7 @@ const TextStyle customButtonTextStyle = TextStyle(
   fontSize: 54,
   fontWeight: FontWeight.bold,
   color: Colors.black87,
+  height: 1.0
 );
 
 const int gridCrossAxisCount = 4;

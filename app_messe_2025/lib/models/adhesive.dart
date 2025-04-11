@@ -6,7 +6,8 @@ class Adhesive {
   final List<String> types;
   final List<String> materials;
   final List<String> results;
-  final Meta meta;  // NEW Meta Field
+  final List<String> certificates; // <-- NEW FIELD
+  final Meta meta;  
 
   Adhesive({
     required this.name,
@@ -16,6 +17,7 @@ class Adhesive {
     required this.types,
     required this.materials,
     required this.results,
+    required this.certificates, // <-- NEW FIELD
     required this.meta,
   });
 
@@ -28,13 +30,14 @@ class Adhesive {
       types: List<String>.from(json['types']),
       materials: List<String>.from(json['materials']),
       results: List<String>.from(json['results']),
-      meta: Meta.fromJson(json['meta'] ?? {}), // Defensive null handling
+      certificates: List<String>.from(json['certificates'] ?? []), // Defensive null handling
+      meta: Meta.fromJson(json['meta'] ?? {}),
     );
   }
 
   @override
   String toString() {
-    return 'Adhesive(name: $name, industries: $industries, applications: $applications, formulations: $formulations, types: $types, materials: $materials, results: $results, meta: $meta)';
+    return 'Adhesive(name: $name, industries: $industries, applications: $applications, formulations: $formulations, types: $types, materials: $materials, results: $results, certificates: $certificates, meta: $meta)';
   }
 }
 

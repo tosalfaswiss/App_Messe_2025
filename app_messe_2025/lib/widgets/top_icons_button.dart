@@ -51,59 +51,96 @@ class _TopIconsButtonState extends State<TopIconsButton> {
                 widget.adhesiveService,
                 widget.previousCategorySlide,
               ),
-              child: Container(
-                padding: const EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                  color: _isHovered ? Colors.grey.shade100 : Colors.white,
-                  border: Border.all(
-                    color: customButtonBorderColor,
-                    width: customButtonBorderWidth,
+              splashColor: Colors.black12,
+              hoverColor: Colors.transparent,
+              child: Transform.scale(
+                scale: _isHovered ? 1.05 : 1.0,
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  decoration: BoxDecoration(
+                    color: Colors.white, // Base background color
+                    border: Border.all(
+                      color: _isHovered
+                          ? const Color(0xFF938B33) // Chosen darker green on hover
+                          : customButtonBorderColor,
+                      width: customButtonBorderWidth * 0.67,
+                    ),
+                    borderRadius:
+                        BorderRadius.circular(customButtonBorderRadius),
                   ),
-                  borderRadius: BorderRadius.circular(customButtonBorderRadius),
-                ),
-                child: Column(
-                  children: [
-                    Expanded(
-                      flex: 7,
-                      child: AspectRatio(
-                        aspectRatio: 1,
-                        child: Image.asset(
-                          widget.imagePath,
-                          fit: BoxFit.contain,
-                          errorBuilder: (context, error, stackTrace) {
-                            return Center(
-                              child: Text(
-                                widget.imagePath,
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 10,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              flex: 7,
+                              child: AspectRatio(
+                                aspectRatio: 1,
+                                child: Image.asset(
+                                  widget.imagePath,
+                                  fit: BoxFit.contain,
+                                  errorBuilder: (context, error, stackTrace) {
+                                    return Center(
+                                      child: Text(
+                                        widget.imagePath,
+                                        textAlign: TextAlign.center,
+                                        style: const TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
-                            );
-                          },
+                            ),
+                            Expanded(
+                              flex: 3,
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                  top: MediaQuery.of(context).size.height *
+                                      0.001,
+                                  bottom: MediaQuery.of(context).size.height *
+                                      0.001,
+                                  left: MediaQuery.of(context).size.width *
+                                      0.001,
+                                  right: MediaQuery.of(context).size.width *
+                                      0.001,
+                                ),
+                                child: AutoSizeText(
+                                  widget.iconData['label'],
+                                  textAlign: TextAlign.center,
+                                  maxLines: 2,
+                                  minFontSize: 8,
+                                  maxFontSize: 20,
+                                  stepGranularity: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  softWrap: true,
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 6),
-                    Expanded(
-                      flex: 3,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                        child: AutoSizeText(
-                          widget.iconData['label'],
-                          textAlign: TextAlign.center,
-                          maxLines: 2,
-                          minFontSize: 10,
-                          stepGranularity: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w500,
+                      // Semi-transparent overlay on hover
+                      if (_isHovered)
+                        Positioned.fill(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(
+                                  customButtonBorderRadius),
+                              color: Colors.grey.shade200.withOpacity(0.2),
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

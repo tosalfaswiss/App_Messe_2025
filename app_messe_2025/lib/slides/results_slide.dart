@@ -60,9 +60,11 @@ class ResultsSlide extends StatelessWidget {
             types: [],
             materials: [],
             results: [],
+            certificates: [], 
             meta: Meta(packaging: [], colors: []),
           ),
         );
+
 
         showDialog(
           context: context,
@@ -89,6 +91,12 @@ class ResultsSlide extends StatelessWidget {
                           .map((color) => Chip(label: Text(color)))
                           .toList(),
                     ),
+                  ],
+                  if (selectedAdhesive.certificates.isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    const Text('Certificates:', style: TextStyle(fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 4),
+                    ...selectedAdhesive.certificates.map((c) => Text('- $c')).toList(),
                   ],
                 ],
               ),

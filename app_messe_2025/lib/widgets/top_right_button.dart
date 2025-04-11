@@ -27,47 +27,50 @@ class _TopRightButtonState extends State<TopRightButton> {
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(customButtonBorderRadius),
-          splashColor: Colors.black12,
-          hoverColor: Colors.transparent,
-          onTap: () {
-            filters.reset();
-            Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(
-                builder: (context) => IndustrySlide(
-                  adhesiveService: widget.adhesiveService,
-                ),
-              ),
-              (route) => false,
-            );
-          },
-          child: Container(
-            decoration: BoxDecoration(
+      child: Align(
+        alignment: Alignment.centerRight,
+        // Constrain the clickable area to just the image's size.
+        child: Material(
+          color: Colors.transparent,
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            // This customBorder confines the splash to the image's rounded shape.
+            customBorder: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(customButtonBorderRadius),
-              color: Colors.transparent,
             ),
-            padding: const EdgeInsets.all(4.0),
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 200),
-              decoration: BoxDecoration(
-                boxShadow: _isHovered
-                    ? [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2),
-                          blurRadius: 8,
-                          offset: const Offset(0, 4),
-                        ),
-                      ]
-                    : [],
-              ),
-              child: Image.asset(
-                topRightButtonIconPath,
-                height: MediaQuery.of(context).size.height * 0.15,
-                fit: BoxFit.contain,
+            splashColor: Colors.black12,
+            hoverColor: Colors.transparent,
+            onTap: () {
+              filters.reset();
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => IndustrySlide(
+                    adhesiveService: widget.adhesiveService,
+                  ),
+                ),
+                (route) => false,
+              );
+            },
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(customButtonBorderRadius),
+              child: Stack(
+                alignment: Alignment.center,
+                // The Stack sizes itself to the image.
+                children: [
+                  Image.asset(
+                    topRightButtonIconPath,
+                    height: MediaQuery.of(context).size.height * 0.2,
+                    fit: BoxFit.contain,
+                  ),
+                  // The hover overlay only covers the image.
+                  if (_isHovered)
+                    Positioned.fill(
+                      child: Container(
+                        color: Colors.grey.shade200.withOpacity(0.3),
+                      ),
+                    ),
+                ],
               ),
             ),
           ),

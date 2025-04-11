@@ -51,13 +51,23 @@ class _CustomButtonState extends State<CustomButton> {
         ? customButtonSize * MediaQuery.of(context).size.height
         : customButtonSize * MediaQuery.of(context).size.height * 0.5;
 
-    final double spacingAboveText = widget.itemCount < 5
-        ? MediaQuery.of(context).size.height * 0.02
-        : MediaQuery.of(context).size.height * 0.01;
+    final double spacingAboveText = MediaQuery.of(context).size.height * 0.02;
 
     return MouseRegion(
-      onEnter: (_) => setState(() => _isHovered = true),
-      onExit: (_) => setState(() => _isHovered = false),
+      onEnter: (_) {
+        if (!widget.isDisabled) {
+          setState(() {
+            _isHovered = true;
+          });
+        }
+      },
+      onExit: (_) {
+        if (!widget.isDisabled) {
+          setState(() {
+            _isHovered = false;
+          });
+        }
+      },
       child: SizedBox(
         width: buttonWidth,
         child: Material(
@@ -67,62 +77,91 @@ class _CustomButtonState extends State<CustomButton> {
             onTap: widget.isDisabled ? null : widget.onTap,
             splashColor: Colors.black12,
             hoverColor: Colors.transparent,
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: effectiveBorderColor,
-                  width: customButtonBorderWidth,
+            child: Transform.scale(
+              scale: _isHovered ? 1.05 : 1.0,
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 200),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    // Use a darker green version of Color(0xFFAC9E00)
+                    color: _isHovered ? const Color(0xFF938B33) : effectiveBorderColor,
+                    width: customButtonBorderWidth,
+                  ),
+                  borderRadius: BorderRadius.circular(customButtonBorderRadius),
+                  color: effectiveBackgroundColor,
                 ),
-                borderRadius:
-                    BorderRadius.circular(customButtonBorderRadius),
-                color: _isHovered
-                    ? Colors.grey.shade100
-                    : effectiveBackgroundColor,
-              ),
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: Stack(
+                  fit: StackFit.expand,
                   children: [
-                    SizedBox(
-                      width: customButtonSize *
-                          MediaQuery.of(context).size.width / 2,
-                      height: imageHeight,
-                      child: Image.asset(
-                        widget.imagePath,
-                        fit: BoxFit.contain,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Center(
-                            child: FittedBox(
-                              child: Text(
-                                widget.imagePath,
+                    Padding(
+                      padding: EdgeInsets.only(
+                        top: widget.itemCount > 4
+                            ? MediaQuery.of(context).size.height * 0.025
+                            : MediaQuery.of(context).size.height * 0.1,
+                        bottom: MediaQuery.of(context).size.height * 0.015,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            width: customButtonSize *
+                                MediaQuery.of(context).size.width /
+                                2,
+                            height: imageHeight,
+                            child: Image.asset(
+                              widget.imagePath,
+                              fit: BoxFit.contain,
+                              errorBuilder: (context, error, stackTrace) {
+                                return Center(
+                                  child: FittedBox(
+                                    child: Text(
+                                      widget.imagePath,
+                                      textAlign: TextAlign.center,
+                                      style: const TextStyle(
+                                        color: Colors.red,
+                                        fontSize: 10,
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                          SizedBox(
+                            height: spacingAboveText,
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 0.015 *
+                                    MediaQuery.of(context).size.width,
+                              ),
+                              child: AutoSizeText(
+                                widget.text,
+                                style: effectiveTextStyle,
                                 textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 10,
-                                ),
+                                maxLines: 2,
+                                minFontSize: 4,
+                                maxFontSize: 32,
+                                stepGranularity: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
-                          );
-                        },
+                          ),
+                        ],
                       ),
                     ),
-                    SizedBox(
-                      height: spacingAboveText, // Dynamically smaller for many items
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                      child: AutoSizeText(
-                        widget.text,
-                        style: effectiveTextStyle,
-                        textAlign: TextAlign.center,
-                        maxLines: 3,
-                        minFontSize: 8,
-                        maxFontSize: 32,
-                        stepGranularity: 1,
-                        overflow: TextOverflow.ellipsis,
+                    // Semi-transparent overlay for hover effect.
+                    if (_isHovered)
+                      Positioned.fill(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(customButtonBorderRadius),
+                            color: Colors.grey.shade300.withOpacity(0.2),
+                          ),
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ),

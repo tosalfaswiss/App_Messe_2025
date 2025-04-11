@@ -37,81 +37,77 @@ class BaseSlide extends StatelessWidget {
     final filters = context.watch<Filters>();
     final topIcons = generateTopIcons(filters);
 
-  return LayoutBuilder(
-    builder: (context, constraints) {
-      final height = constraints.maxHeight;
-      final width = constraints.maxWidth;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final height = constraints.maxHeight;
+        final width = constraints.maxWidth;
 
-      return Scaffold(
-        backgroundColor: backgroundColor,
-        body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              SizedBox(height: height * 0.03),
-
-              SizedBox(
-                height: height * 0.12,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          disableBackButton
-                              ? SizedBox(width: width * 0.16)
-                              : BackButtonWithTitle(
-                                  title: "Back",
-                                  onPressed: onBackPressed,
-                                ),
-                          Container(
-                            constraints: BoxConstraints(
-                              maxWidth: width * 0.3,
-                              maxHeight: height * 0.15,
+        return Scaffold(
+          backgroundColor: backgroundColor,
+          body: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                SizedBox(height: height * 0.03),
+                SizedBox(
+                  height: height * 0.15,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            disableBackButton
+                                ? SizedBox(width: width * 0.16)
+                                : BackButtonWithTitle(
+                                    // If the slide title is industrySlideTitle, show "Exit" instead of "Back".
+                                    title: title == industrySlideTitle ? "Exit" : "Back",
+                                    onPressed: onBackPressed,
+                                  ),
+                            Container(
+                              constraints: BoxConstraints(
+                                maxWidth: width * 0.3,
+                                maxHeight: height * 0.15,
+                              ),
+                              padding: const EdgeInsets.all(4.0),
+                              child: topRightButton ??
+                                  Image.asset(
+                                    alfaLogoAsset,
+                                    fit: BoxFit.contain,
+                                    errorBuilder: (context, error, stackTrace) =>
+                                        const SizedBox.shrink(),
+                                  ),
                             ),
-                            padding: const EdgeInsets.all(4.0),
-                            child: topRightButton ??
-                                Image.asset(
-                                  alfaLogoAsset,
-                                  fit: BoxFit.contain,
-                                  errorBuilder: (context, error, stackTrace) =>
-                                      const SizedBox.shrink(),
-                                ),
-                          ),
-                        ],
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-                        child: TitleWidget(title: title),
-                      ),
-                    ],
+                          ],
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                          child: TitleWidget(title: title),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-
-              SizedBox(height: height * 0.02),
-
-              topIcons.isNotEmpty
-                  ? Expanded(
-                      flex: 2,
-                      child: _buildTopIconsSection(context, height, topIcons, filters),
-                    )
-                  : SizedBox(height: height * 0.2),
-
-              SizedBox(height: height * 0.02),
-
-              Expanded(
-                flex: 5,
-                child: _buildBottomSheet(context),
-              ),
-            ],
+                SizedBox(height: height * 0.02),
+                topIcons.isNotEmpty
+                    ? Expanded(
+                        flex: 2,
+                        child: _buildTopIconsSection(context, height, topIcons, filters),
+                      )
+                    : SizedBox(height: height * 0.2),
+                SizedBox(height: height * 0.02),
+                Expanded(
+                  flex: 5,
+                  child: _buildBottomSheet(context),
+                ),
+              ],
+            ),
           ),
-        ),
-      );
-    },
-  );
+        );
+      },
+    );
   }
 
   Widget _buildTopIconsSection(BuildContext context, double height, List<Map<String, dynamic>> topIcons, Filters filters) {
@@ -159,7 +155,6 @@ class BaseSlide extends StatelessWidget {
 
   Widget _buildBottomSheet(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: width * 0.05),
       child: MiddleGrid(

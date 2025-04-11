@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'adhesive_type_selection_slide.dart';
 import 'base_slide.dart';
@@ -24,8 +25,7 @@ class _IndustrySlideState extends State<IndustrySlide> {
   @override
   void initState() {
     super.initState();
-
-    // Defer filter mutation until after the first build
+    // Defer filter mutation until after the first build.
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final filters = context.read<Filters>();
       final savedIndustry = filters.industry;
@@ -48,9 +48,12 @@ class _IndustrySlideState extends State<IndustrySlide> {
     }).toList();
 
     return BaseSlide(
-      title: industrySlideTitle,
-      disableBackButton: true,
-      onBackPressed: defaultOnBackPressed,
+      title: industrySlideTitle, // This constant will trigger the "Exit" label.
+      disableBackButton: false, // Enable the top‑left button.
+      // onBackPressed now exits the app.
+      onBackPressed: () {
+        SystemNavigator.pop();
+      },
       adhesiveService: widget.adhesiveService,
       topRightButton: TopRightButton(
         adhesiveService: widget.adhesiveService,
